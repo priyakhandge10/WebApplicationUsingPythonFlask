@@ -7,6 +7,24 @@
     </head>
     <body>
         <h1>Fetch data from database using python flask</h1>
-        
+        <input type="text" placeholder="Search.." name="search">
+        <button type="button" class="button">Save</button>
+        <button type="button" class="button">Download</button>
+        <table>
+            <thead>
+             {%- for column in columns %}
+                <th>{{ column }}</th>
+             {%- endfor %}
+            </thead>
+           <tbody>
+            {%- for row in items %}
+               <tr>
+               {%- for column in columns %}
+                  <td>{{ row|attr(column) }}</td>
+               {%- endfor %}
+               </tr>
+            {%- endfor %}
+            </tbody>
+            </table>
     </body>
 </html>
