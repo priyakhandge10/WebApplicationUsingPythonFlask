@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}">   
+        <title>flask by example</title>
+    </head>
+    <body>
+        <h1>Fetch data from database using python flask and MySQL</h1>
+        
+        <button type="button" class="button">Save</button>
+        <button type="button" class="button">Download</button>
+        <input type="text" placeholder="Search.." name="search" width="100%">
+
+        <br><br>   
+        <table>
+            <thead>
+                <tr>
+                    <th>task_id</th>
+                    <th>task_name</th>
+                    <th>task_description</th>
+                    <th>user_id</th>
+                    <th>station_number</th>
+                    <th>assign_date</th>
+                    <th>complete_date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}    
+                       <tr>
+                           <td>{{row[0]}}</td>
+                           <td>{{row[1]}}</td>
+                           <td>{{row[2]}}</td>
+                           <td>{{row[3]}}</td>
+                           <td>{{row[4]}}</td>
+                           <td>{{row[5]}}</td>
+                           <td>{{row[6]}}</td>
+
+                       </tr>
+                   {% endfor %}
+               </tbody>
+        </table>
+    </body>
+</html>
