@@ -3,11 +3,20 @@ body {
 }
 h1 {
   text-align: center;
+  font-size: 36px;
   font-family: 'Times New Roman', Times, serif;
+}
+.search {
+  width: 50%;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  height: 35%;
 }
 .button {
     padding: 15px 25px;
-    font-size: 34px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     cursor: pointer;
     outline: none;
@@ -15,16 +24,16 @@ h1 {
     background-color: #04AA6D;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
+    /* box-shadow: 0 9px #999; */
   }
   
   .button:hover {background-color: #3e8e41}
   
-  .button:active {
+  /* .button:active {
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-  }
+  } */
 table {
     border-collapse: collapse;
     width: 100%;
@@ -46,4 +55,5 @@ table {
   th {
     background-color: #04AA6D;
     color: white;
+    font-size: 20px;
   }
